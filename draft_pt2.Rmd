@@ -5,7 +5,9 @@ output: html_document
 
 #Problem Statement
 ##Background
-In 2017, the Trump Administration passed the Tax Cuts and Jobs Act, authorizing the establishment of new "Opportunity Zones" (OZ) -- offering a new type of tax-incentive to target private equity investments into distressed communities. Of the XXX low-income community (LIC) census tracts eligible, 8,700 8,700 were selected by state officials, and approved by the US Treasury.  This program purports to offer an unprecedented level of opportunity for new investment aimed at community and economic development, with an estimated $X Trillion in capital elligible for this type of tax-exemption. Social impact funds, community development financial institutions, and state and local agencies across the country are now mobilizing to attract private funding, and to green-light shovel ready development projects. However, with this new rush to reinvest and redevelopment are myriad concerns about how to manage new investment, how to prioritize community needs, and how to stave off negative effects associated with gentrification, displacement, and affordability. The Federal government has issued minimal guidance, and in the absence of and rules and regulations, many communities feel that the program may ultimately serve developers and investors, rather than the communities and people living in the OZ neighborhoods.
+In 2017, the Trump Administration passed the Tax Cuts and Jobs Act, authorizing the establishment of new "Opportunity Zones" (OZ) -- offering a new type of tax-incentive to target private equity investments into distressed communities. Of the XXX low-income community (LIC) census tracts eligible, 8,700 8,700 (#delete extra word) were selected by state officials, and approved by the US Treasury.  This program purports to offer an unprecedented level of opportunity for new investment aimed at community and economic development, with an estimated $X Trillion in capital elligible for this type of tax-exemption. Social impact funds, community development financial institutions, and state and local agencies across the country are now mobilizing to attract private funding, and to green-light shovel ready development projects. However, with this new rush to reinvest and redevelopment are myriad concerns about how to manage new investment, how to prioritize community needs, and how to stave off negative effects associated with gentrification, displacement, and affordability. The Federal government has issued minimal guidance, and in the absence of and rules and regulations, many communities feel that the program may ultimately serve developers and investors, rather than the communities and people living in the OZ neighborhoods.
+
+(Very relevant topic, great intro)
 
 ##Objective
 The goal of this project is to:
@@ -64,7 +66,7 @@ library(tableone)
 # spatial libs
 library(sf)
 library(maps)
-library(albersusa)
+library(albersusa) : When trying to run this i got an error message (package ‘albersusa’ is not available (for R version 3.4.3) which version are you using? is there another package that I can use?
 
 # graphics/viz libs
 library(viridis)
@@ -150,6 +152,8 @@ sfdf %>%
   ylab("% of state tracts") + 
   labs(fill = "Census Tract\nEligibility/Designation") + 
   scale_fill_manual(values=c("grey","blue","dark blue"))
+  
+  #Maybe filter the dataset by region (northeast, southwest, etc) and make individual plots so one can distinguish between states with greater ease
 
 ```                     
 
